@@ -37,26 +37,21 @@ def main():
     borrowed_books = []
     members = set()
 
-    # Adding 4 books
     add_book(catalog, 1, "Python Basics", "John", 2020)
     add_book(catalog, 2, "Data Science", "Alice", 2021)
     add_book(catalog, 3, "Machine Learning", "Bob", 2022)
     add_book(catalog, 4, "AI Fundamentals", "David", 2023)
 
-    # Registering members
     register_member(members, 101)
     register_member(members, 102)
     register_member(members, 103)
-    register_member(members, 101)  # Duplicate (ignored)
+    register_member(members, 101)
 
-    # Borrowing books
     borrow_book(catalog, borrowed_books, 1)
     borrow_book(catalog, borrowed_books, 3)
 
-    # Returning one book
     return_book(borrowed_books, 1)
 
-    # Display available books
     show_available(catalog, borrowed_books)
 
 
